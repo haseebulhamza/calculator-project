@@ -1,0 +1,85 @@
+
+/*BIG CALCULATOR CONTAINER*/
+#container{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*TEXTBOX CONTAINER*/
+#textBox{
+    height: 30px;
+    width: 174px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+}
+
+#textBox::placeholder{
+    font-weight: bold;
+}
+
+/*OPERATOR BUTTON CONTAINER*/
+.operatorButtonsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*CALCULATIONSBTNS CONTAINER*/
+#calculationBtns{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/*OPERATOR BUTTONS (+ - X /)*/
+.operators{
+    height: 20px;
+    width: 40px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: grey;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+}
+
+
+/*NUMBER BUTTON GRID*/
+.numberBtnGrid{
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 7px;
+}
+.numberBtns{
+    width: 40px;
+    height: 20px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: grey;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+}
+
+
+/*EQUAL BUTTON GRID*/
+#equalBtn{
+    height: 110px;
+    width: 40px;
+    border-style: none;
+    background-color: lightblue;
+    cursor: pointer;
+}

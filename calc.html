@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="" class="textboxContainer">
+            <input id="textBox"type="text" placeholder="0">
+        </div>
+        <div class="operatorButtonsContainer">
+            <button id="plusButton" class="operators">+</button>
+            <button id="minusButton" class="operators">-</button>
+            <button id="timesButton" class="operators">x</button>
+            <button id="divisionButton" class="operators">/</button>
+        </div>
+
+        <div id="calculationBtns">
+            <div class="numberBtnGrid">
+                <button id="sevenBtn" class="numberBtns">7</button>
+                <button id="eightBtn" class="numberBtns">8</button>
+                <button id="nineBtn" class="numberBtns">9</button>
+                <button id="fourBtn" class="numberBtns">4</button>
+                <button id="fiveBtn" class="numberBtns">5</button>
+                <button id="sixBtn" class="numberBtns">6</button>
+                <button id="oneBtn" class="numberBtns">1</button>
+                <button id="twoBtn" class="numberBtns">2</button>
+                <button id="threeBtn" class="numberBtns">3</button>
+                <button id="zeroBtn" class="numberBtns">0</button>
+                <button id="pointBtn" class="numberBtns">.</button>
+                <button id="clearBtn" class="numberBtns">C</button>
+            </div>
+    
+            <div id="equalBtnDiv">
+                <button id="equalBtn" onclick="myFunc();">
+                    =
+                </button>
+            </div>
+        </div>
+
+        
+    </div>
+    <script>
+
+        // ON CLICK EVENTS
+
+        // = BUTTON 
+        function myFunc(){
+            let inputValue = document.getElementById("textBox").value;
+            let total = eval(inputValue);
+            console.log(total);
+            // change textbox value to total
+            document.getElementById("textBox").value = total;
+
+        }
+        // + BUTTON 
+        document.getElementById("plusButton").onclick = function(){
+            document.getElementById("textBox").value += "+";
+        };
+
+        /* - BUTTON */
+        document.getElementById("minusButton").onclick = function(){
+            document.getElementById("textBox").value += "-";
+        };
+        /* X button */
+        document.getElementById("timesButton").onclick = function(){
+            document.getElementById("textBox").value += "*";
+        };
+        /* Division Button */
+        document.getElementById("divisionButton").onclick = function(){
+            document.getElementById("textBox").value += "/";
+        };
+
+        /* 7 BUTTON */
+        document.getElementById("sevenBtn").onclick = function(){
+            let inputValue = document.getElementById("textBox").value += 7;
+        };
+
+        /* 8 Btn */
+        document.getElementById("eightBtn").onclick = function(){
+            let inputValue = document.getElementById("textBox").value += 8;
+        };
+
+        /* 9 Btn */
+        document.getElementById("nineBtn").onclick = function(){
+            document.getElementById("textBox").value += "9";
+        };
+
+        /*4 Btn */
+        document.getElementById("fourBtn").onclick = function(){
+            document.getElementById("textBox").value += "4";
+        };
+
+        /*5 Btn */
+        document.getElementById("fiveBtn").onclick = function(){
+            document.getElementById("textBox").value += "5";
+        };
+
+        /*6 Btn */
+        document.getElementById("sixBtn").onclick = function(){
+            document.getElementById("textBox").value += "6";
+        };
+
+        /*1 Btn */
+        document.getElementById("oneBtn").onclick = function(){
+            document.getElementById("textBox").value += "1";
+        };
+
+        /* 2 Btn */
+        document.getElementById("twoBtn").onclick = function(){
+            document.getElementById("textBox").value += "2";
+        };
+
+        /* 3 Btn */
+        document.getElementById("threeBtn").onclick = function(){
+            document.getElementById("textBox").value += "3";
+        };
+
+        /* 0 Btn */
+        document.getElementById("zeroBtn").onclick = function(){
+            document.getElementById("textBox").value += "0";
+        };
+
+        /* CLEAR BUTTON */
+        document.getElementById("clearBtn").onclick = function(){
+            document.getElementById("textBox").value = "";
+        };
+        /* point button */
+        document.getElementById("pointBtn").onclick = function(){
+            document.getElementById("textBox").value += ".";
+        }
+
+
+    </script>
+</body>
+</html>
